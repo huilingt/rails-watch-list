@@ -1,0 +1,13 @@
+<h2><%= @movie.title %></h2>
+<br>
+<%= link_to "Back", movies_path %>
+<%= link_to "Edit this movie", edit_movie_path %>
+<%= link_to "Delete",
+    movie_path(movie),
+    method: :delete,
+    data: { confirm: "Are you sure?" } %>
+<ul>
+  <li>Rating: <%= @movie.rating %></li>
+  <li><%= @movie.overview %></li>
+  <li><img src="<%= @movie.poster_url %>" alt="Wonder Woman poster"></li>
+</ul>
